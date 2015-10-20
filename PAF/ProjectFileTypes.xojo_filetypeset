@@ -1,0 +1,55 @@
+#tag FileTypeSet
+	#tag FileType
+		CodeName=ShortsDesigner
+		DocIcon=Shorts Designer.xojo_resources;&h0
+		Extension=.shorts_report
+		Flags=&h5
+		MacCreator=XXXX
+		MacType=YYYY
+		Name=ShortsDesigner
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
+	#tag EndFileType
+
+	#tag FileType
+		CodeName=SpecialAny
+		Extension=
+		Flags=&h2
+		MacCreator=????
+		MacType=????
+		Name=special/any
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
+	#tag EndFileType
+
+	#tag FileType
+		CodeName=TextTabSeparatedValues
+		Extension=.tsv
+		Flags=&h2
+		MacCreator=XCEL
+		MacType=TEXT
+		Name=text/tab-separated-values
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
+	#tag EndFileType
+
+	#tag FileType
+		CodeName=Text
+		Extension=.asc;.ascii;.bas;.c;.class;.cp;.cpp;.h;.hp;.hpp;.i3;.java;.m2;.m3;.mak;.text;.txt
+		Flags=&h2
+		MacCreator=????
+		MacType=TEXT
+		Name=text/plain
+		UTIConformsTo=
+		Description=
+		MimeType=
+		Imported=True
+	#tag EndFileType
+
+#tag EndFileTypeSet
