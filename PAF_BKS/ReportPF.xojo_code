@@ -65,8 +65,8 @@ Protected Class ReportPF
 		      // db.SchemaDict is a dictionary (Tablename:Dictionary)
 		      // the sub dictionary is (FieldName:FieldType)
 		      
-		      fieldTypeDict = oDBWrapper.SchemaDict.Value(NthField(sMatch,".",1))
-		      arsFieldType.Append fieldTypeDict.Value(NthField(sMatch,".",2))
+		      fieldTypeDict = oDBWrapper.SchemaDict.Value(NthField(sMatch,".",1).ToText)
+		      arsFieldType.Append fieldTypeDict.Value(NthField(sMatch,".",2).ToText)
 		      
 		      sMatchAlias = oDBWrapper.AliasResolutionDict.Value(sMatch)
 		      

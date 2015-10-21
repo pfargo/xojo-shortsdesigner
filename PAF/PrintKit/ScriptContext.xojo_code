@@ -23,7 +23,7 @@ Protected Class ScriptContext
 
 	#tag Method, Flags = &h0
 		Function SC_GetFieldDoubleValue(sFieldName as String) As Double
-		  Dim oPrintItem as PAF_PrintKit.PrintItem = DictItems.Lookup(sFieldName,"")
+		  Dim oPrintItem as PAF_PrintKit.PrintItem = DictItems.Lookup(sFieldName,nil)
 		  
 		  if oPrintItem isa PAF_PrintKit.PrintField then
 		    
@@ -42,7 +42,7 @@ Protected Class ScriptContext
 
 	#tag Method, Flags = &h0
 		Function SC_GetFieldIntegerValue(sFieldName as String) As Integer
-		  Dim oPrintItem as PAF_PrintKit.PrintItem = DictItems.Lookup(sFieldName,"")
+		  Dim oPrintItem as PAF_PrintKit.PrintItem = DictItems.Lookup(sFieldName,nil)
 		  
 		  if oPrintItem isa PAF_PrintKit.PrintField then
 		    
@@ -61,7 +61,7 @@ Protected Class ScriptContext
 
 	#tag Method, Flags = &h0
 		Function SC_GetFieldRecordsetName(sFieldName as String) As String
-		  Dim oPrintItem as PAF_PrintKit.PrintItem =  DictItems.Lookup(sFieldName,"")
+		  Dim oPrintItem as PAF_PrintKit.PrintItem =  DictItems.Lookup(sFieldName,nil)
 		  
 		  if oPrintItem isa PAF_PrintKit.PrintField then
 		    
@@ -80,7 +80,7 @@ Protected Class ScriptContext
 
 	#tag Method, Flags = &h0
 		Function SC_GetFieldStringValue(sFieldName as String) As String
-		  Dim oPrintItem as PAF_PrintKit.PrintItem = DictItems.Lookup(sFieldName,"")
+		  Dim oPrintItem as PAF_PrintKit.PrintItem = DictItems.Lookup(sFieldName,nil)
 		  
 		  if oPrintItem isa PAF_PrintKit.PrintField then
 		    
