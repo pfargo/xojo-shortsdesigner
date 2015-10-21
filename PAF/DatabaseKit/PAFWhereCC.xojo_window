@@ -9,7 +9,7 @@ Begin ContainerControl PAFWhereCC
    Enabled         =   True
    EraseBackground =   True
    HasBackColor    =   False
-   Height          =   262
+   Height          =   286
    HelpTag         =   ""
    InitialParent   =   ""
    Left            =   0
@@ -30,7 +30,7 @@ Begin ContainerControl PAFWhereCC
       Bold            =   False
       Caption         =   "Add / Edit Condition"
       Enabled         =   True
-      Height          =   102
+      Height          =   132
       HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
@@ -88,7 +88,7 @@ Begin ContainerControl PAFWhereCC
          Alignment       =   0
          AutoDeactivate  =   True
          AutomaticallyCheckSpelling=   False
-         BackColor       =   &cFFFFFF00
+         BackColor       =   &cFFFF00FF
          Bold            =   False
          Border          =   True
          CueText         =   ""
@@ -206,7 +206,6 @@ Begin ContainerControl PAFWhereCC
          Selectable      =   False
          TabIndex        =   5
          TabPanelIndex   =   0
-         TabStop         =   True
          Text            =   "Field:"
          TextAlign       =   0
          TextColor       =   &c00000000
@@ -241,7 +240,6 @@ Begin ContainerControl PAFWhereCC
          Selectable      =   False
          TabIndex        =   6
          TabPanelIndex   =   0
-         TabStop         =   True
          Text            =   "Operator:"
          TextAlign       =   0
          TextColor       =   &c00000000
@@ -276,7 +274,6 @@ Begin ContainerControl PAFWhereCC
          Selectable      =   False
          TabIndex        =   7
          TabPanelIndex   =   0
-         TabStop         =   True
          Text            =   "Value:"
          TextAlign       =   0
          TextColor       =   &c00000000
@@ -315,7 +312,7 @@ Begin ContainerControl PAFWhereCC
          TextFont        =   "System"
          TextSize        =   0.0
          TextUnit        =   0
-         Top             =   68
+         Top             =   89
          Underline       =   False
          Visible         =   True
          Width           =   80
@@ -346,7 +343,7 @@ Begin ContainerControl PAFWhereCC
          TextFont        =   "System"
          TextSize        =   0.0
          TextUnit        =   0
-         Top             =   68
+         Top             =   89
          Underline       =   False
          Visible         =   True
          Width           =   80
@@ -408,105 +405,17 @@ Begin ContainerControl PAFWhereCC
          TextFont        =   "System"
          TextSize        =   0.0
          TextUnit        =   0
-         Top             =   68
+         Top             =   89
          Underline       =   False
          Visible         =   True
          Width           =   80
       End
-      Begin RadioButton rbShow
+      Begin GroupBox GroupBox2
          AutoDeactivate  =   True
          Bold            =   False
-         Caption         =   "All Report Table Fields"
+         Caption         =   "Show"
          Enabled         =   True
-         Height          =   20
-         HelpTag         =   ""
-         Index           =   0
-         InitialParent   =   "GroupBox1"
-         Italic          =   False
-         Left            =   71
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         Scope           =   0
-         TabIndex        =   14
-         TabPanelIndex   =   0
-         TabStop         =   True
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
-         Top             =   72
-         Underline       =   False
-         Value           =   True
-         Visible         =   True
-         Width           =   168
-      End
-      Begin RadioButton rbShow
-         AutoDeactivate  =   True
-         Bold            =   False
-         Caption         =   "Just Report Fields"
-         Enabled         =   True
-         Height          =   20
-         HelpTag         =   ""
-         Index           =   1
-         InitialParent   =   "GroupBox1"
-         Italic          =   False
-         Left            =   251
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         Scope           =   0
-         TabIndex        =   15
-         TabPanelIndex   =   0
-         TabStop         =   True
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
-         Top             =   72
-         Underline       =   False
-         Value           =   False
-         Visible         =   True
-         Width           =   147
-      End
-      Begin RadioButton rbShow
-         AutoDeactivate  =   True
-         Bold            =   False
-         Caption         =   "All Fields"
-         Enabled         =   True
-         Height          =   20
-         HelpTag         =   ""
-         Index           =   2
-         InitialParent   =   "GroupBox1"
-         Italic          =   False
-         Left            =   410
-         LockBottom      =   False
-         LockedInPosition=   False
-         LockLeft        =   True
-         LockRight       =   False
-         LockTop         =   True
-         Scope           =   0
-         TabIndex        =   16
-         TabPanelIndex   =   0
-         TabStop         =   True
-         TextFont        =   "System"
-         TextSize        =   0.0
-         TextUnit        =   0
-         Top             =   72
-         Underline       =   False
-         Value           =   False
-         Visible         =   True
-         Width           =   100
-      End
-      Begin Label Label4
-         AutoDeactivate  =   True
-         Bold            =   False
-         DataField       =   ""
-         DataSource      =   ""
-         Enabled         =   True
-         Height          =   20
+         Height          =   52
          HelpTag         =   ""
          Index           =   -2147483648
          InitialParent   =   "GroupBox1"
@@ -517,23 +426,104 @@ Begin ContainerControl PAFWhereCC
          LockLeft        =   True
          LockRight       =   False
          LockTop         =   True
-         Multiline       =   False
          Scope           =   0
-         Selectable      =   False
-         TabIndex        =   17
+         TabIndex        =   13
          TabPanelIndex   =   0
          TabStop         =   True
-         Text            =   "Show:"
-         TextAlign       =   0
-         TextColor       =   &c00000000
          TextFont        =   "System"
          TextSize        =   0.0
          TextUnit        =   0
-         Top             =   72
-         Transparent     =   False
+         Top             =   69
          Underline       =   False
          Visible         =   True
-         Width           =   48
+         Width           =   436
+         Begin RadioButton rbShow
+            AutoDeactivate  =   True
+            Bold            =   False
+            Caption         =   "All Report Table Fields"
+            Enabled         =   True
+            Height          =   20
+            HelpTag         =   ""
+            Index           =   0
+            InitialParent   =   "GroupBox2"
+            Italic          =   False
+            Left            =   20
+            LockBottom      =   False
+            LockedInPosition=   False
+            LockLeft        =   True
+            LockRight       =   False
+            LockTop         =   True
+            Scope           =   0
+            TabIndex        =   0
+            TabPanelIndex   =   0
+            TabStop         =   True
+            TextFont        =   "System"
+            TextSize        =   0.0
+            TextUnit        =   0
+            Top             =   93
+            Underline       =   False
+            Value           =   True
+            Visible         =   True
+            Width           =   168
+         End
+         Begin RadioButton rbShow
+            AutoDeactivate  =   True
+            Bold            =   False
+            Caption         =   "Just Report Fields"
+            Enabled         =   True
+            Height          =   20
+            HelpTag         =   ""
+            Index           =   1
+            InitialParent   =   "GroupBox2"
+            Italic          =   False
+            Left            =   200
+            LockBottom      =   False
+            LockedInPosition=   False
+            LockLeft        =   True
+            LockRight       =   False
+            LockTop         =   True
+            Scope           =   0
+            TabIndex        =   1
+            TabPanelIndex   =   0
+            TabStop         =   True
+            TextFont        =   "System"
+            TextSize        =   0.0
+            TextUnit        =   0
+            Top             =   93
+            Underline       =   False
+            Value           =   False
+            Visible         =   True
+            Width           =   147
+         End
+         Begin RadioButton rbShow
+            AutoDeactivate  =   True
+            Bold            =   False
+            Caption         =   "All Fields"
+            Enabled         =   True
+            Height          =   20
+            HelpTag         =   ""
+            Index           =   2
+            InitialParent   =   "GroupBox2"
+            Italic          =   False
+            Left            =   359
+            LockBottom      =   False
+            LockedInPosition=   False
+            LockLeft        =   True
+            LockRight       =   False
+            LockTop         =   True
+            Scope           =   0
+            TabIndex        =   2
+            TabPanelIndex   =   0
+            TabStop         =   True
+            TextFont        =   "System"
+            TextSize        =   0.0
+            TextUnit        =   0
+            Top             =   93
+            Underline       =   False
+            Value           =   False
+            Visible         =   True
+            Width           =   82
+         End
       End
    End
    Begin Listbox lbWhere
@@ -578,7 +568,7 @@ Begin ContainerControl PAFWhereCC
       TextFont        =   "System"
       TextSize        =   0.0
       TextUnit        =   0
-      Top             =   105
+      Top             =   130
       Underline       =   False
       UseFocusRing    =   False
       Visible         =   True
@@ -589,7 +579,7 @@ Begin ContainerControl PAFWhereCC
    Begin BevelButton bbDateTime
       AcceptFocus     =   True
       AutoDeactivate  =   True
-      BackColor       =   &cFFFFFF00
+      BackColor       =   &cFFFF00FF
       Bevel           =   0
       Bold            =   False
       ButtonType      =   0
