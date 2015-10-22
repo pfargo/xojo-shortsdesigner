@@ -115,7 +115,7 @@ Begin ContainerControl PreviewCC
       Index           =   -2147483648
       Left            =   "0"
       LockedInPosition=   False
-      TabIndex        =   1
+      TabIndex        =   "1"
       TabPanelIndex   =   0
       TabStop         =   True
       Top             =   "853"

@@ -773,11 +773,14 @@ Protected Class ReportPF
 		      
 		    end if
 		    
-		  case "PostgreSQL"
+		  case "CubeSQL"
+		    
+		    // Assumes EncodeBase64
 		    
 		    If Len(oField.StringValue)>0 then
 		      
-		      Dim picString as string = DecodeHex(oField.StringValue)
+		      Dim picString as string = DecodeBase64(oField.StringValue)
+		      
 		      Dim p as Picture = Picture.FromData(picString)
 		      
 		      Return p
@@ -788,9 +791,49 @@ Protected Class ReportPF
 		      
 		    end if
 		    
+		  case "PostgreSQL"
+		    
+		    // Assumes bytea field
+		    
+		    If Len(oField.StringValue)>0 then
+		      
+		      Dim picString as string = DecodeHex(oField.StringValue)
+		      
+		      if picString <> "" then
+		        Dim p as Picture = Picture.FromData(picString)
+		        
+		        Return p
+		        
+		      else
+		        
+		        Return nil
+		        
+		      end if
+		      
+		    else
+		      
+		      Return nil
+		      
+		    end if
+		    
 		  case "ODBC"
 		    
-		    'if Len(oField.StringValue)>0 then
+		    // I primarily use ODBC for FileMaker legacy connections
+		    // I have found the most stable way to deal with FM Server and png files
+		    // is to us a FM Container field to hold a "File" and then use
+		    // GetAs(" + FieldName + ", 'FILE') to read the file which will contain
+		    // a pictureValue in the recordset databasefield
+		    // The GetAs is called in PAF_PrintKit.DesignCanvas ExtractFieldNamesFromBand method 
+		    
+		    if oField.PictureValue <> nil then
+		      
+		      Return oField.PictureValue
+		      
+		    else
+		      
+		      Return Nil
+		      
+		    end if
 		    
 		  case "MySQL"
 		    
