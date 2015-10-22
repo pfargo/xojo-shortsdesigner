@@ -909,6 +909,13 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
+#tag Events rbShow
+	#tag Event
+		Sub Action(index as Integer)
+		  BuildWhereTableFieldsMenu
+		End Sub
+	#tag EndEvent
+#tag EndEvents
 #tag Events lbWhere
 	#tag Event
 		Sub Change()
