@@ -198,8 +198,8 @@ Inherits PAF_PrintKit.PrintText
 		IsFunction As Boolean = False
 	#tag EndProperty
 
-	#tag Property, Flags = &h21
-		Private IsImage As Boolean = False
+	#tag Property, Flags = &h0
+		IsImage As Boolean = False
 	#tag EndProperty
 
 
