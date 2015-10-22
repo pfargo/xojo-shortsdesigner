@@ -2300,7 +2300,23 @@ Implements pfReceiver
 		        
 		      else
 		        
-		        sField = pf.FieldName + " " + chr(34) + pf.alias + chr(34)
+		        // special case for "FileMaker"
+		        // I primarily use ODBC for FileMaker legacy connections
+		        // I have found the most stable way to deal with FM Server and png files
+		        // is to us a FM Container field to hold a "File" and then use
+		        // GetAs(" + FieldName + ", 'FILE') to read the file which will contain
+		        // a pictureValue in the recordset databasefield which is used in the
+		        // ReportPF.DBFieldToPicture method
+		        
+		        if oDBWrapper.Type = "ODBC" and pf.IsImage then
+		          
+		          sField = "GetAs(" + pf.FieldName + ", 'FILE')" + " " + chr(34) + pf.alias + chr(34)
+		          
+		        else
+		          
+		          sField = pf.FieldName + " " + chr(34) + pf.alias + chr(34)
+		          
+		        end if
 		        
 		      end if
 		      
@@ -3691,6 +3707,10 @@ Implements pfReceiver
 		          end if
 		        else
 		          if baseTable = "" then baseTable = NthField(flds(0),".",1)
+		          // Special Case when the base table is part of an expression
+		          if instr(baseTable,"(") > 0 then
+		            baseTable = NthField(baseTable,"(",2)
+		          end if
 		        end if
 		        
 		        // make sure we have any trailingBand items before extracting tables
